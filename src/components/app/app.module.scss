@@ -1,0 +1,16 @@
+@import "vars.scss";
+@import "base.scss";
+@import "nullstyle.scss";
+
+
+.logo {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.main {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}

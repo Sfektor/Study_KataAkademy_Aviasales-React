@@ -1,0 +1,30 @@
+@import '../app/vars';
+
+.tiket-filter {
+	background-color: white;
+	border-radius: 7px;
+	overflow: hidden;
+	border: 1px solid rgba(223, 229, 236, 1);
+	display: inline-flex;
+
+	&__items {
+		display: flex;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid rgba(223, 229, 236, 1);
+		text-transform: uppercase;
+		letter-spacing: 0.50px;
+		width: 168px;
+		height: 50px;
+
+		&.active {
+			color: white;
+			background-color: $colorBlue;
+			border: none;
+		}
+	}
+}

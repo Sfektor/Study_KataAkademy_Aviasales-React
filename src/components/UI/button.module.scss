@@ -1,0 +1,15 @@
+@import '../app/vars';
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 15px 0px;
+	background-color: $colorBlue;
+	color: white;
+	line-height: 20px;
+	letter-spacing: 0.50px;
+	border-radius: 5px;
+	margin-top: 20px;
+}

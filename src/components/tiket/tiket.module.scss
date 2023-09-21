@@ -1,0 +1,52 @@
+@import '../app/vars';
+
+.tiket {
+	background: white;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.10);
+	border-radius: 7px;
+	padding: 20px;
+	margin-top: 20px;
+
+	&__row-header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__row-main {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.row-header {
+	&__column {
+		font-size: 24px;
+		color: $colorBlue;
+		margin-bottom: 10px;
+	}
+}
+
+.row-main {
+	&__column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__block-text {
+		display: flex;
+		flex-direction: column;
+
+		:first-child {
+			color: $colorGrey;
+			text-transform: uppercase;
+			letter-spacing: 0.50px;
+			line-height: 18px;
+			margin-top: 10px;
+		}
+
+		:last-child {
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+}
