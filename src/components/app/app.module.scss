@@ -7,10 +7,34 @@
 	display: flex;
 	justify-content: center;
 	margin-top: 50px;
+
+	@media (max-width:767px) {
+		margin-top: 20px;
+	}
 }
 
 .main {
 	margin-top: 50px;
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width:767px) {
+		justify-content: center;
+		margin-top: 20px;
+	}
+}
+
+.content {
+	@media (max-width:767px) {
+		width: 480px;
+		margin-bottom: 10px;
+	}
+}
+
+.button {
+	display: flex;
+
+	:not(:last-child) {
+		margin-right: 5px;
+	}
 }

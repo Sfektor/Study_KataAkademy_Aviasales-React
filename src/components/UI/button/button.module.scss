@@ -1,0 +1,23 @@
+@import '../../app/vars';
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 15px 0px;
+	background: white;
+	color: $colorBlack;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: 0.50px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	border: 1px solid rgba(223, 229, 236, 1);
+
+	&_active {
+		background-color: $colorBlue;
+		color: white;
+		font-weight: 400;
+	}
+}
