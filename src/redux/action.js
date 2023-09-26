@@ -1,3 +1,5 @@
+/* eslint-disable no-await-in-loop */
+/* eslint-disable prefer-const */
 import Service from '../components/utils/service';
 
 import {

@@ -1,11 +1,11 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable import/order */
 // Импорты React
-import React from 'react';
+import thunk from 'redux-thunk';
 import ReactDOM from 'react-dom/client';
-
 // Импорты для Redux
 import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
 
 import { rootReducer } from './redux/rootReducer';
 
@@ -17,10 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const store = createStore(
 	rootReducer,
-	compose(
-		applyMiddleware(thunk),
-		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-	)
+	compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 );
 
 root.render(

@@ -1,3 +1,6 @@
+/* eslint-disable default-param-last */
+/* eslint-disable indent */
+/* eslint-disable import/prefer-default-export */
 import { TIKETS_LOAD, GET_TIKET } from './types';
 
 const initionalState = {
@@ -6,21 +9,22 @@ const initionalState = {
 
 export const tiketsLoadReducer = (state = initionalState, action) => {
 	switch (action.type) {
-	case TIKETS_LOAD:
-		const data = action.data?.jsonData;
+		case TIKETS_LOAD:
+			// eslint-disable-next-line no-case-declarations
+			const data = action.data?.jsonData;
 
-		return {
-			...state,
-			data,
-		};
+			return {
+				...state,
+				data,
+			};
 
-	case GET_TIKET:
-		return {
-			...state,
-			numShowTicket: state.numShowTicket + 5,
-		};
+		case GET_TIKET:
+			return {
+				...state,
+				numShowTicket: state.numShowTicket + 5,
+			};
 
-	default:
-		return state;
+		default:
+			return state;
 	}
 };
