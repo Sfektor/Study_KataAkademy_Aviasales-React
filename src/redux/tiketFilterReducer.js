@@ -1,18 +1,18 @@
-import { GET_TIKET_FILTER } from "./types";
+import { GET_TIKET_FILTER } from './types';
 
 const initionalState = {
-  stateFilter: "theFastest",
+	stateFilter: 'theCheapest',
 };
 
 export const ticketFilterReducer = (state = initionalState, action) => {
-  switch (action.type) {
-    case GET_TIKET_FILTER:
-      return {
-        ...state,
-        stateFilter: action.name,
-      };
+	switch (action.type) {
+	case GET_TIKET_FILTER:
+		return {
+			...state,
+			stateFilter: action.name,
+		};
 
-    default:
-      return state;
-  }
+	default:
+		return state;
+	}
 };

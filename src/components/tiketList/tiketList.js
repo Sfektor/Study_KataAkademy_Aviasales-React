@@ -1,16 +1,26 @@
-import Tiket from "../tiket/tiket";
-import Button from "../UI/button/button";
-import cls from "./tiketList.module.scss";
+import { connect } from 'react-redux';
 
-const TiketList = () => {
-  return (
-    <>
-      <div className={cls.body}>
-        <Tiket />
-        <Button active="true">показать ещё 5 билетов</Button>
-      </div>
-    </>
-  );
-};
+import Tiket from '../tiket/tiket';
+import Button from '../UI/button/button';
+import { getTiket } from '../../redux/action';
 
-export default TiketList;
+import cls from './tiketList.module.scss';
+
+function TiketList({ getFiveTiket }) {
+	return (
+		<div className={cls.body}>
+			<Tiket />
+			<Button active="true" onClick={() => getFiveTiket()}>
+				показать ещё 5 билетов
+			</Button>
+		</div>
+	);
+}
+
+const mapStateToProps = (state) => state;
+
+const mapDispatchToProps = (dispatch) => ({
+	getFiveTiket: () => dispatch(getTiket()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TiketList);
